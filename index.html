@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- animsition.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animsition/3.2.1/css/animsition.min.css"
+      integrity="sha512-/T8xGJ7rJUbE4bn2PW9wvEAF53I9piLzo+MbB+UNQ7h2PDhe0GfLP6dKSoGciFkhcKvvefRkoH3IwLwzm14xgg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- animsition.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animsition/3.2.1/js/animsition.min.js"
+      integrity="sha512-A6ariLe+TnwXgF0FtGuOAZB4MuNxxS1W+NvJZxN3fcXYtcrxHu7Z8yJ2MBk7MwnZuG70ksTGdAUyUEbbXW6Imw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              darkOrange: "#EB7F26",
+              lightOrange: "#F4A970",
+              grayBackground: "#F0F0F0",
+              darkBlue: "#263256",
+            },
+            zIndex: {
+              c: "-1",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style></style>
+  </head>
+  <!-- <body> -->
+    
+  <body
+    class="bg-grayBackground animsition"
+    data-animsition-in-class="fade-in"
+    data-animsition-out-class="fade-out"
+  >
+  
+
+    <div class="visible md:hidden">
+      <div class="content-center grid place-items-center">
+        <img src="boy-dynamic-color.png" class="mt-20 rotate-12 w-8/12" />
+        <h1 class="text-5xl mt-5 font-bold text-darkBlue text-center">
+          Hi there,<br />
+          I Am Michael
+        </h1>
+      </div>
+
+      <div class="mt-20">
+          asdasfdfs
+      </div>
+
+    </div>
+
+    <div class="grid grid-cols-12 gap-2 mt-56 hidden md:grid">
+      <div class="col-span-2"></div>
+      <div class="col-span-4 mt-12">
+        <h1 class="text-7xl font-bold text-darkBlue">
+          Hi there,<br />
+          I Am Michael
+        </h1>
+
+        <p class="text-3xl font-semibold text-darkBlue mt-5">
+          Informatics Student
+        </p>
+        <p class="text-2xl font-semibold text-darkBlue max-w-2xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
+          voluptatum laborum numquam blanditiis harum quisqua
+        </p>
+      </div>
+      <div class="col-span-4">
+        <img src="boy-dynamic-color.png" class="rotate-12 max-w-xl" />
+      </div>
+      <div class="col-span-2"></div>
+    </div>
+
+    <img
+      src="left-bg.svg"
+      class="fixed bottom-0 z-c w-10/12 md:w-3/12 lg:w-3/12 lx:w-3/12"
+    />
+    <img
+      src="right-bg.svg"
+      class="fixed top-0 right-0 z-c w-5/12 md:w-3/12 lg:w-3/12 lx:w-3/12"
+    />
+
+    <!--
+    <div class="fixed bottom-0 right-0 max-h-24">
+        asdsad
+    </div>
+    -->
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    $(".animsition").animsition({
+      inClass: "fade-in",
+      outClass: "fade-out",
+      inDuration: 6500,
+      outDuration: 800,
+      linkElement: ".animsition-link",
+      // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+      loading: true,
+      loadingParentElement: "body", //animsition wrapper element
+      loadingClass: "animsition-loading",
+      loadingInner: "", // e.g '<img src="loading.svg" />'
+      timeout: false,
+      timeoutCountdown: 5000,
+      onLoadEvent: true,
+      browser: ["animation-duration", "-webkit-animation-duration"],
+      // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+      // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+      overlay: false,
+      overlayClass: "animsition-overlay-slide",
+      overlayParentElement: "body",
+      transition: function (url) {
+        window.location.href = url;
+      },
+    });
+  });
+</script>
