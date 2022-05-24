@@ -63,6 +63,17 @@
       .mt-1v {
         margin-top: 1vh;
       }
+
+      @media only screen and (max-height: 630px) {
+        .mobile-img {
+          display: none;
+        }
+        .mobile-title {
+          margin-top: 15vh;
+        }
+    }
+
+
     </style>
   </head>
   <body
@@ -73,8 +84,8 @@
 
     <div class="visible md:hidden">
       <div class="content-center grid place-items-center">
-        <img src="boy-dynamic-color.png" class=" rotate-12 h-mobile-img" />
-        <h1 class="mt-c text-4xl font-bold text-darkBlue text-center mt-1v">
+        <img src="boy-dynamic-color.png" class="mobile-img rotate-12 h-mobile-img" />
+        <h1 class="mobile-title mt-c text-4xl font-bold text-darkBlue text-center mt-1v">
           Hi there,<br />
           I Am Michael
         </h1>
