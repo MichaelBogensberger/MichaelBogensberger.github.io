@@ -32,6 +32,8 @@
               lightOrange: "#F4A970",
               grayBackground: "#F0F0F0",
               darkBlue: "#263256",
+              grayBackgroundTrans: "rgba(240, 240, 240, 0.31)",
+              grayBackgroundTrans2: "rgba(240, 240, 240, 0.38)",
             },
             zIndex: {
               c: "-1",
@@ -41,16 +43,19 @@
       };
     </script>
 
-    <style></style>
+    <style>
+      .bottom-div-card {
+        backdrop-filter: blur(10px);
+      }
+    </style>
   </head>
-  <!-- <body> -->
-    
+  <body>
+    <!--
   <body
     class="bg-grayBackground animsition"
     data-animsition-in-class="fade-in"
     data-animsition-out-class="fade-out"
-  >
-  
+  > -->
 
     <div class="visible md:hidden">
       <div class="content-center grid place-items-center">
@@ -61,10 +66,33 @@
         </h1>
       </div>
 
-      <div class="mt-20">
-          asdasfdfs
-      </div>
+      <div
+        class="bottom-div-card mt-20 h-72 bg-grayBackgroundTrans mx-8 px-5 py-5 rounded-lg absolute inset-x-0 bottom-5"
+      >
+        <p class="text-2xl font-semibold text-darkBlue">Informatics Student</p>
+        <p class="text-lg font-semibold text-darkBlue max-w-2xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+          mollitia, molestiae quas.
+        </p>
 
+        <a href="">
+          <button
+            class="bg-grayBackgroundTrans2 text-darkBlue font-bold py-2 px-4 rounded ml-6 mr-6 mt-5 inset-x-0 bottom-4 absolute "
+          >
+            GitHub
+          </button>
+        </a>
+
+        <a href="">
+          <button
+            class="bg-grayBackgroundTrans2 text-darkBlue font-bold py-2 px-4 rounded ml-6 mr-6 mt-2 inset-x-0 bottom-16 absolute"
+          >
+            LinkedIn
+          </button>
+        </a>
+
+
+      </div>
     </div>
 
     <div class="grid grid-cols-12 gap-2 mt-56 hidden md:grid">
