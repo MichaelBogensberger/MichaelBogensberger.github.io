@@ -47,6 +47,12 @@
       .bottom-div-card {
         backdrop-filter: blur(10px);
       }
+
+      .glass-eff {
+        box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+      }
+
     </style>
   </head>
   <body
@@ -65,7 +71,7 @@
       </div>
 
       <div
-        class="bottom-div-card mt-20 h-72 bg-grayBackgroundTrans mx-8 px-5 py-5 rounded-lg absolute inset-x-0 bottom-5"
+        class="bottom-div-card glass-eff mt-20 h-72 bg-grayBackgroundTrans mx-8 px-5 py-5 rounded-lg absolute inset-x-0 bottom-5"
       >
         <p class="text-2xl font-semibold text-darkBlue">Informatics Student</p>
         <p class="text-lg font-semibold text-darkBlue max-w-2xl">
@@ -75,7 +81,7 @@
 
         <a href="">
           <button
-            class="bg-grayBackgroundTrans2 text-darkBlue font-bold py-2 px-4 rounded ml-6 mr-6 mt-5 inset-x-0 bottom-4 absolute "
+            class="glass-eff bg-grayBackgroundTrans2 text-darkBlue font-bold py-2 px-4 rounded ml-6 mr-6 mt-5 inset-x-0 bottom-4 absolute "
           >
             GitHub
           </button>
@@ -83,7 +89,7 @@
 
         <a href="">
           <button
-            class="bg-grayBackgroundTrans2 text-darkBlue font-bold py-2 px-4 rounded ml-6 mr-6 mt-2 inset-x-0 bottom-16 absolute"
+            class="glass-eff bg-grayBackgroundTrans2 text-darkBlue font-bold py-2 px-4 rounded ml-6 mr-6 mt-2 inset-x-0 bottom-16 absolute"
           >
             LinkedIn
           </button>
@@ -159,5 +165,10 @@
         window.location.href = url;
       },
     });
+
+
+    $("body").removeClass("animsition");
+
+
   });
 </script>
